@@ -23,7 +23,7 @@ const WhyChooseUs: React.FC = () => {
     { 
       icon: <ThumbsUp className="text-arnika-teal mr-3" size={20} />,
       text: t('quality_guarantee'),
-      description: t('quality_guarantee_desc', 'If you're not satisfied, we'll re-clean at no additional cost.')
+      description: t('quality_guarantee_desc', 'If you\'re not satisfied, we\'ll re-clean at no additional cost.')
     },
     { 
       icon: <Clock className="text-arnika-teal mr-3" size={20} />,
