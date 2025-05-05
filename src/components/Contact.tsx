@@ -2,10 +2,27 @@
 import React from 'react';
 import { useLanguage } from '@/hooks/useLanguage';
 import IntersectionObserver from './IntersectionObserver';
-import { Phone, Mail, Instagram, Mail as MailIcon } from 'lucide-react';
+import { Phone, Mail, Instagram, WhatsApp } from 'lucide-react';
+import { useIsMobile } from '@/hooks/use-mobile';
+import { 
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue
+} from '@/components/ui/select';
 
 const Contact: React.FC = () => {
   const { t } = useLanguage();
+  const isMobile = useIsMobile();
+  const phoneNumber = "+905551234567";
+  const whatsappMessage = encodeURIComponent(t('whatsapp_message', "Hello! I'd like to inquire about your cleaning services."));
+
+  const getWhatsAppLink = () => {
+    return isMobile 
+      ? `whatsapp://send?phone=${phoneNumber.replace('+', '')}&text=${whatsappMessage}`
+      : `https://web.whatsapp.com/send?phone=${phoneNumber.replace('+', '')}&text=${whatsappMessage}`;
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -21,39 +38,61 @@ const Contact: React.FC = () => {
         </IntersectionObserver>
         
         <div className="flex flex-col md:flex-row gap-12 mt-12">
-          <IntersectionObserver threshold={0.2} className="md:w-1/2">
+          <IntersectionObserver threshold={0.2} className="w-full md:w-1/2">
             <div className="space-y-6">
-              <div className="flex items-center">
-                <Phone className="text-arnika-teal mr-4" />
-                <div>
-                  <a href="tel:+905551234567" className="hover:text-arnika-teal transition-colors">
-                    +90 555 123 4567
-                  </a>
+              <div className="bg-zinc-900 p-6 rounded-lg hover:bg-zinc-800 transition-all duration-300">
+                <div className="flex items-center">
+                  <Phone className="text-arnika-teal mr-4" />
+                  <div>
+                    <a href={`tel:${phoneNumber}`} className="hover:text-arnika-teal transition-colors">
+                      {phoneNumber}
+                    </a>
+                  </div>
                 </div>
               </div>
               
-              <div className="flex items-center">
-                <MailIcon className="text-arnika-teal mr-4" />
-                <div>
-                  <a href="mailto:info@arnika.com" className="hover:text-arnika-teal transition-colors">
-                    info@arnika.com
-                  </a>
+              <div className="bg-zinc-900 p-6 rounded-lg hover:bg-zinc-800 transition-all duration-300">
+                <div className="flex items-center">
+                  <WhatsApp className="text-arnika-teal mr-4" />
+                  <div>
+                    <a 
+                      href={getWhatsAppLink()} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="hover:text-arnika-teal transition-colors"
+                    >
+                      {t('contact_whatsapp', 'Chat on WhatsApp')}
+                    </a>
+                  </div>
                 </div>
               </div>
               
-              <div className="flex items-center">
-                <Instagram className="text-arnika-teal mr-4" />
-                <div>
-                  <a href="https://instagram.com/arnikatemizlik" target="_blank" rel="noopener noreferrer" className="hover:text-arnika-teal transition-colors">
-                    @arnikatemizlik
-                  </a>
+              <div className="bg-zinc-900 p-6 rounded-lg hover:bg-zinc-800 transition-all duration-300">
+                <div className="flex items-center">
+                  <Mail className="text-arnika-teal mr-4" />
+                  <div>
+                    <a href="mailto:info@arnika.com" className="hover:text-arnika-teal transition-colors">
+                      info@arnika.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-zinc-900 p-6 rounded-lg hover:bg-zinc-800 transition-all duration-300">
+                <div className="flex items-center">
+                  <Instagram className="text-arnika-teal mr-4" />
+                  <div>
+                    <a href="https://instagram.com/arnikatemizlik" target="_blank" rel="noopener noreferrer" className="hover:text-arnika-teal transition-colors">
+                      @arnikatemizlik
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </IntersectionObserver>
           
-          <IntersectionObserver threshold={0.2} className="md:w-1/2">
-            <form onSubmit={handleSubmit} className="space-y-4">
+          <IntersectionObserver threshold={0.2} className="w-full md:w-1/2">
+            <form onSubmit={handleSubmit} className="space-y-4 bg-zinc-900 p-6 rounded-lg">
               <div>
                 <label htmlFor="name" className="block mb-2">{t('contact_name')}</label>
                 <input
@@ -76,14 +115,19 @@ const Contact: React.FC = () => {
               
               <div>
                 <label htmlFor="service" className="block mb-2">{t('contact_service')}</label>
-                <select
-                  id="service"
-                  className="w-full bg-zinc-800 border border-zinc-700 rounded-md px-4 py-2 focus:outline-none focus:border-arnika-teal"
-                >
-                  <option value="home">{t('service_1_title')}</option>
-                  <option value="office">{t('service_2_title')}</option>
-                  <option value="marble">{t('service_3_title')}</option>
-                </select>
+                <Select>
+                  <SelectTrigger className="w-full bg-zinc-800 border border-zinc-700 text-left">
+                    <SelectValue placeholder={t('select_service', 'Select a service')} />
+                  </SelectTrigger>
+                  <SelectContent className="bg-zinc-800 border border-zinc-700">
+                    <SelectItem value="home">{t('service_1_title')}</SelectItem>
+                    <SelectItem value="office">{t('service_2_title')}</SelectItem>
+                    <SelectItem value="marble">{t('service_3_title')}</SelectItem>
+                    <SelectItem value="carpet">{t('service_4_title', 'Carpet Cleaning')}</SelectItem>
+                    <SelectItem value="facade">{t('service_5_title', 'Facade Cleaning')}</SelectItem>
+                    <SelectItem value="disinfection">{t('service_6_title', 'Disinfection')}</SelectItem>
+                  </SelectContent>
+                </Select>
               </div>
               
               <div>

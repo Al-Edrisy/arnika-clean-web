@@ -1,10 +1,20 @@
 
 import React from 'react';
 import { useLanguage } from '@/hooks/useLanguage';
-import { Instagram, Phone, Mail } from 'lucide-react';
+import { Instagram, Phone, Mail, WhatsApp } from 'lucide-react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const Footer: React.FC = () => {
   const { t } = useLanguage();
+  const isMobile = useIsMobile();
+  const phoneNumber = "+905551234567";
+  const whatsappMessage = encodeURIComponent(t('whatsapp_message', "Hello! I'd like to inquire about your cleaning services."));
+  
+  const getWhatsAppLink = () => {
+    return isMobile 
+      ? `whatsapp://send?phone=${phoneNumber.replace('+', '')}&text=${whatsappMessage}`
+      : `https://web.whatsapp.com/send?phone=${phoneNumber.replace('+', '')}&text=${whatsappMessage}`;
+  };
   
   return (
     <footer className="bg-zinc-900 py-8 px-4">
@@ -25,11 +35,18 @@ const Footer: React.FC = () => {
               <Instagram size={20} />
             </a>
             <a 
-              href="https://wa.me/905551234567" 
+              href={getWhatsAppLink()}
               target="_blank" 
               rel="noopener noreferrer"
               className="text-arnika-teal hover:text-arnika-blue transition-colors"
               aria-label="WhatsApp"
+            >
+              <WhatsApp size={20} />
+            </a>
+            <a 
+              href={`tel:${phoneNumber}`}
+              className="text-arnika-teal hover:text-arnika-blue transition-colors"
+              aria-label="Phone"
             >
               <Phone size={20} />
             </a>

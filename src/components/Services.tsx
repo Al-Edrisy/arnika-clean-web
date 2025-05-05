@@ -1,30 +1,96 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useLanguage } from '@/hooks/useLanguage';
 import IntersectionObserver from './IntersectionObserver';
-import { Home, Briefcase, Star } from 'lucide-react';
+import { Home, Briefcase, Star, ChevronDown, ChevronUp, Eraser, Building, Spray } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const Services: React.FC = () => {
   const { t } = useLanguage();
+  const isMobile = useIsMobile();
+  const [expandedService, setExpandedService] = useState<number | null>(null);
+
+  const toggleService = (index: number) => {
+    if (expandedService === index) {
+      setExpandedService(null);
+    } else {
+      setExpandedService(index);
+    }
+  };
 
   const services = [
     {
       icon: <Home className="service-icon" />,
       title: t('service_1_title'),
       description: t('service_1_desc'),
-      benefit: t('service_1_benefit')
+      benefit: t('service_1_benefit'),
+      details: [
+        t('service_1_detail_1', 'Detailed room-by-room cleaning'),
+        t('service_1_detail_2', 'Kitchen and bathroom sanitization'),
+        t('service_1_detail_3', 'Floor cleaning and polishing'),
+        t('service_1_detail_4', 'Dusting and surface cleaning')
+      ]
     },
     {
       icon: <Briefcase className="service-icon" />,
       title: t('service_2_title'),
       description: t('service_2_desc'),
-      benefit: t('service_2_benefit')
+      benefit: t('service_2_benefit'),
+      details: [
+        t('service_2_detail_1', 'Workspace cleaning and organization'),
+        t('service_2_detail_2', 'Meeting room preparation'),
+        t('service_2_detail_3', 'Common areas maintenance'),
+        t('service_2_detail_4', 'Restroom sanitization')
+      ]
     },
     {
       icon: <Star className="service-icon" />,
       title: t('service_3_title'),
       description: t('service_3_desc'),
-      benefit: t('service_3_benefit')
+      benefit: t('service_3_benefit'),
+      details: [
+        t('service_3_detail_1', 'Marble polishing and restoration'),
+        t('service_3_detail_2', 'Stain removal treatment'),
+        t('service_3_detail_3', 'Surface protection application'),
+        t('service_3_detail_4', 'Long-term maintenance plans')
+      ]
+    },
+    {
+      icon: <Eraser className="service-icon" />,
+      title: t('service_4_title', 'Carpet Cleaning'),
+      description: t('service_4_desc', 'Professional deep cleaning for carpets and rugs'),
+      benefit: t('service_4_benefit', 'Remove stains and allergens effectively'),
+      details: [
+        t('service_4_detail_1', 'Deep stain extraction'),
+        t('service_4_detail_2', 'Allergen removal treatment'),
+        t('service_4_detail_3', 'Quick drying process'),
+        t('service_4_detail_4', 'Deodorizing and refreshing')
+      ]
+    },
+    {
+      icon: <Building className="service-icon" />,
+      title: t('service_5_title', 'Facade Cleaning'),
+      description: t('service_5_desc', 'Professional exterior cleaning services'),
+      benefit: t('service_5_benefit', 'Restore your building\'s appearance'),
+      details: [
+        t('service_5_detail_1', 'High-pressure washing'),
+        t('service_5_detail_2', 'Glass and window cleaning'),
+        t('service_5_detail_3', 'Graffiti removal'),
+        t('service_5_detail_4', 'Protective coating application')
+      ]
+    },
+    {
+      icon: <Spray className="service-icon" />,
+      title: t('service_6_title', 'Disinfection'),
+      description: t('service_6_desc', 'Complete sanitization and disinfection services'),
+      benefit: t('service_6_benefit', 'Create a safe and healthy environment'),
+      details: [
+        t('service_6_detail_1', 'EPA-approved disinfectants'),
+        t('service_6_detail_2', 'Surface sanitization'),
+        t('service_6_detail_3', 'Air purification'),
+        t('service_6_detail_4', 'Preventive treatment plans')
+      ]
     }
   ];
 
@@ -38,11 +104,34 @@ const Services: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {services.map((service, index) => (
             <IntersectionObserver key={index} threshold={0.2}>
-              <div className="bg-zinc-800 p-8 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-arnika-teal/20 hover:translate-y-[-5px]">
-                {service.icon}
-                <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                <p className="text-gray-300 mb-4">{service.description}</p>
-                <p className="text-arnika-teal font-semibold">{service.benefit}</p>
+              <div className="bg-zinc-800 p-8 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-arnika-teal/20">
+                <div className="cursor-pointer" onClick={() => toggleService(index)}>
+                  {service.icon}
+                  <div className="flex justify-between items-center">
+                    <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+                    {expandedService === index ? 
+                      <ChevronUp className="text-arnika-teal" size={20} /> : 
+                      <ChevronDown className="text-arnika-teal" size={20} />
+                    }
+                  </div>
+                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  <p className="text-arnika-teal font-semibold">{service.benefit}</p>
+                </div>
+                
+                <div 
+                  className={cn(
+                    "mt-4 overflow-hidden transition-all duration-300", 
+                    expandedService === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                  )}
+                >
+                  <hr className="my-4 border-zinc-700" />
+                  <h4 className="font-semibold mb-2">{t('service_details', 'Service Details')}:</h4>
+                  <ul className="list-disc pl-5 space-y-2 text-gray-300">
+                    {service.details.map((detail, i) => (
+                      <li key={i}>{detail}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </IntersectionObserver>
           ))}

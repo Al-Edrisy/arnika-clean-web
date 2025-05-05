@@ -18,28 +18,6 @@ const Index = () => {
     if (metaDesc) {
       metaDesc.setAttribute("content", "Arnika Cleaning Services - Ankara's Professional Cleaning Team offering home, office, and specialized cleaning services.");
     }
-    
-    // Set up scroll animation observer
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.1
-    });
-    
-    document.querySelectorAll('.animate-on-scroll').forEach(element => {
-      observer.observe(element);
-    });
-    
-    return () => {
-      document.querySelectorAll('.animate-on-scroll').forEach(element => {
-        observer.unobserve(element);
-      });
-    };
   }, []);
   
   return (
