@@ -2,7 +2,7 @@
 import React from 'react';
 import { useLanguage } from '@/hooks/useLanguage';
 import IntersectionObserver from './IntersectionObserver';
-import { Phone, Mail, Instagram, WhatsApp } from 'lucide-react';
+import { Phone, Mail, Instagram, MessageCircle } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { 
   Select,
@@ -16,7 +16,7 @@ const Contact: React.FC = () => {
   const { t } = useLanguage();
   const isMobile = useIsMobile();
   const phoneNumber = "+905551234567";
-  const whatsappMessage = encodeURIComponent(t('whatsapp_message', "Hello! I'd like to inquire about your cleaning services."));
+  const whatsappMessage = encodeURIComponent(t('whatsapp_message'));
 
   const getWhatsAppLink = () => {
     return isMobile 
@@ -53,7 +53,7 @@ const Contact: React.FC = () => {
               
               <div className="bg-zinc-900 p-6 rounded-lg hover:bg-zinc-800 transition-all duration-300">
                 <div className="flex items-center">
-                  <WhatsApp className="text-arnika-teal mr-4" />
+                  <MessageCircle className="text-arnika-teal mr-4" />
                   <div>
                     <a 
                       href={getWhatsAppLink()} 
@@ -61,7 +61,7 @@ const Contact: React.FC = () => {
                       rel="noopener noreferrer" 
                       className="hover:text-arnika-teal transition-colors"
                     >
-                      {t('contact_whatsapp', 'Chat on WhatsApp')}
+                      {t('contact_whatsapp')}
                     </a>
                   </div>
                 </div>
@@ -117,15 +117,15 @@ const Contact: React.FC = () => {
                 <label htmlFor="service" className="block mb-2">{t('contact_service')}</label>
                 <Select>
                   <SelectTrigger className="w-full bg-zinc-800 border border-zinc-700 text-left">
-                    <SelectValue placeholder={t('select_service', 'Select a service')} />
+                    <SelectValue placeholder={t('select_service')} />
                   </SelectTrigger>
                   <SelectContent className="bg-zinc-800 border border-zinc-700">
                     <SelectItem value="home">{t('service_1_title')}</SelectItem>
                     <SelectItem value="office">{t('service_2_title')}</SelectItem>
                     <SelectItem value="marble">{t('service_3_title')}</SelectItem>
-                    <SelectItem value="carpet">{t('service_4_title', 'Carpet Cleaning')}</SelectItem>
-                    <SelectItem value="facade">{t('service_5_title', 'Facade Cleaning')}</SelectItem>
-                    <SelectItem value="disinfection">{t('service_6_title', 'Disinfection')}</SelectItem>
+                    <SelectItem value="carpet">{t('service_4_title')}</SelectItem>
+                    <SelectItem value="facade">{t('service_5_title')}</SelectItem>
+                    <SelectItem value="disinfection">{t('service_6_title')}</SelectItem>
                   </SelectContent>
                 </Select>
               </div>

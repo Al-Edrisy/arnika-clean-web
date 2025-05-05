@@ -38,16 +38,16 @@ const Testimonials: React.FC = () => {
       avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80'
     },
     {
-      text: t('testimonial_4', "The cleaning team was extremely thorough and professional. They transformed our office space completely!"),
-      author: t('testimonial_4_author', "Ahmet Y."),
+      text: t('testimonial_4'),
+      author: t('testimonial_4_author'),
       company: "Tech Innovate",
       platform: "WhatsApp",
       platformIcon: <MessageCircle size={16} className="text-green-500" />,
       avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80'
     },
     {
-      text: t('testimonial_5', "I've tried many cleaning services, but Arnika is by far the best. They pay attention to every detail."),
-      author: t('testimonial_5_author', "Zeynep K."),
+      text: t('testimonial_5'),
+      author: t('testimonial_5_author'),
       company: "Creative Design Studio",
       platform: "Instagram",
       platformIcon: <Instagram size={16} className="text-pink-500" />,

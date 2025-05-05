@@ -1,14 +1,14 @@
 
 import React from 'react';
 import { useLanguage } from '@/hooks/useLanguage';
-import { Instagram, Phone, Mail, WhatsApp } from 'lucide-react';
+import { Instagram, Phone, Mail, MessageCircle } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 const Footer: React.FC = () => {
   const { t } = useLanguage();
   const isMobile = useIsMobile();
   const phoneNumber = "+905551234567";
-  const whatsappMessage = encodeURIComponent(t('whatsapp_message', "Hello! I'd like to inquire about your cleaning services."));
+  const whatsappMessage = encodeURIComponent(t('whatsapp_message'));
   
   const getWhatsAppLink = () => {
     return isMobile 
@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
               className="text-arnika-teal hover:text-arnika-blue transition-colors"
               aria-label="WhatsApp"
             >
-              <WhatsApp size={20} />
+              <MessageCircle size={20} />
             </a>
             <a 
               href={`tel:${phoneNumber}`}

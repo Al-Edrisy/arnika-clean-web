@@ -13,27 +13,27 @@ const WhyChooseUs: React.FC = () => {
     { 
       icon: <CheckCircle className="text-arnika-teal mr-3" size={20} />,
       text: t('eco_friendly'),
-      description: t('eco_friendly_desc', 'We use products that are safe for your family, pets, and the environment.')
+      description: t('eco_friendly_desc')
     },
     { 
       icon: <Award className="text-arnika-teal mr-3" size={20} />,
       text: t('professional_team'),
-      description: t('professional_team_desc', 'Our staff is trained, insured, and committed to providing excellent service.')
+      description: t('professional_team_desc')
     },
     { 
       icon: <ThumbsUp className="text-arnika-teal mr-3" size={20} />,
       text: t('quality_guarantee'),
-      description: t('quality_guarantee_desc', 'If you\'re not satisfied, we\'ll re-clean at no additional cost.')
+      description: t('quality_guarantee_desc')
     },
     { 
       icon: <Clock className="text-arnika-teal mr-3" size={20} />,
       text: t('affordable_prices'),
-      description: t('affordable_prices_desc', 'Competitive rates with flexible packages to fit your budget.')
+      description: t('affordable_prices_desc')
     },
     { 
       icon: <Heart className="text-arnika-teal mr-3" size={20} />,
-      text: t('customer_centric', 'Customer-Centric'),
-      description: t('customer_centric_desc', 'We tailor our services to meet your specific needs and preferences.')
+      text: t('customer_centric'),
+      description: t('customer_centric_desc')
     }
   ];
 
@@ -80,9 +80,9 @@ const WhyChooseUs: React.FC = () => {
             </div>
             
             <div className="mt-8 p-6 bg-zinc-900 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4">{t('our_mission', 'Our Mission')}</h3>
+              <h3 className="text-xl font-semibold mb-4">{t('our_mission')}</h3>
               <p className="text-gray-300">
-                {t('mission_statement', 'To provide exceptional cleaning services that enhance the quality of life for our clients while promoting environmental sustainability and customer satisfaction.')}
+                {t('mission_statement')}
               </p>
             </div>
           </IntersectionObserver>
