@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -96,6 +100,48 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-arnika-dark text-arnika-white font-montserrat;
+    scroll-behavior: smooth;
+  }
+  
+  .section-title {
+    @apply text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 md:mb-10 relative;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    height: 3px;
+    width: 60px;
+    background-color: #00A8B5;
+  }
+  
+  .animate-on-scroll {
+    @apply opacity-0;
+  }
+  
+  .visible {
+    @apply animate-fade-in;
+  }
+  
+  .btn-primary {
+    @apply bg-arnika-teal text-arnika-white px-6 py-2 rounded-md font-semibold transition-all duration-300 hover:bg-arnika-blue;
+  }
+  
+  .counter-box {
+    @apply relative font-bold text-3xl md:text-4xl text-arnika-teal;
+    counter-reset: count;
+  }
+  
+  .counter-box::after {
+    @apply absolute content-[counter(count)];
+  }
+  
+  .service-icon {
+    @apply text-arnika-teal text-4xl mb-3;
   }
 }
