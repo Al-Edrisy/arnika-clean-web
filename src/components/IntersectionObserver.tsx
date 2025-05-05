@@ -1,16 +1,19 @@
 
 import React, { useEffect, useRef, ReactNode } from 'react';
+import { cn } from '@/lib/utils';
 
 interface Props {
   children: ReactNode;
   threshold?: number;
   rootMargin?: string;
+  className?: string; // Added className prop
 }
 
 const IntersectionObserver: React.FC<Props> = ({
   children,
   threshold = 0.1,
   rootMargin = "0px",
+  className = "", // Default to empty string
 }) => {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -42,7 +45,7 @@ const IntersectionObserver: React.FC<Props> = ({
   }, [rootMargin, threshold]);
 
   return (
-    <div ref={ref} className="animate-on-scroll">
+    <div ref={ref} className={cn("animate-on-scroll", className)}>
       {children}
     </div>
   );
