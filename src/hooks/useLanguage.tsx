@@ -1,4 +1,3 @@
-
 import React, { createContext, useState, useContext, ReactNode } from 'react';
 
 type Language = 'tr' | 'en';
@@ -32,6 +31,10 @@ const translations: Record<string, Record<Language, string>> = {
   "about_text": {
     tr: "10 yılı aşkın tecrübemizle, inşaat sonrası temizlik, ofis sterilizasyonu ve özel yüzey bakımında Türkiye'nin güvenilir partneriyiz.",
     en: "With 10+ years of experience, we specialize in post-construction cleaning, office sterilization, and premium surface care in Turkey."
+  },
+  "about_text_2": {
+    tr: "Çevre dostu ürünler ve gelişmiş temizlik teknikleri kullanarak Ankara genelinde evler ve işletmeler için olağanüstü sonuçlar sunuyoruz.",
+    en: "We use environmentally friendly products and advanced cleaning techniques to deliver exceptional results for homes and businesses throughout Ankara."
   },
   
   // Services Section

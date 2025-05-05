@@ -8,6 +8,7 @@ import WhyChooseUs from '@/components/WhyChooseUs';
 import Testimonials from '@/components/Testimonials';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 
 const Index = () => {
   useEffect(() => {
@@ -23,6 +24,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-arnika-dark text-arnika-white font-montserrat">
       <LangToggle />
+      <FloatingWhatsApp />
       <Hero />
       <About />
       <Services />

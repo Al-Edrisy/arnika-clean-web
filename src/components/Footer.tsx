@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
   const { t } = useLanguage();
   const isMobile = useIsMobile();
   const phoneNumber = "+905551234567";
-  const whatsappMessage = encodeURIComponent(t('whatsapp_message'));
+  const whatsappMessage = encodeURIComponent(t('whatsapp_message', 'Hello! I\'d like to inquire about your cleaning services.'));
   
   const getWhatsAppLink = () => {
     return isMobile 
@@ -17,8 +17,35 @@ const Footer: React.FC = () => {
   };
   
   return (
-    <footer className="bg-zinc-900 py-8 px-4">
+    <footer className="bg-zinc-900 py-12 px-4">
       <div className="container mx-auto">
+        <div className="flex flex-col md:flex-row justify-between items-center mb-8">
+          <div className="mb-6 md:mb-0">
+            <h3 className="text-xl font-bold mb-2 text-arnika-teal">Arnika Cleaning</h3>
+            <p className="text-sm text-gray-400 max-w-md">
+              {t('footer_description', 'Professional cleaning services for homes and businesses in Ankara with a focus on quality, reliability and customer satisfaction.')}
+            </p>
+          </div>
+          
+          <div className="flex flex-col space-y-2">
+            <h4 className="font-semibold text-arnika-teal mb-2">{t('contact_us', 'Contact Us')}</h4>
+            <div className="flex items-center">
+              <Phone size={16} className="text-arnika-teal mr-2" />
+              <a href={`tel:${phoneNumber}`} className="text-gray-400 hover:text-white transition-colors">
+                {phoneNumber}
+              </a>
+            </div>
+            <div className="flex items-center">
+              <Mail size={16} className="text-arnika-teal mr-2" />
+              <a href="mailto:info@arnika.com" className="text-gray-400 hover:text-white transition-colors">
+                info@arnika.com
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <hr className="border-gray-800 my-6" />
+        
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-gray-400 mb-4 md:mb-0">
             {t('footer_copyright')}

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useLanguage } from '@/hooks/useLanguage';
 import IntersectionObserver from './IntersectionObserver';
@@ -21,15 +20,15 @@ const Services: React.FC = () => {
 
   const services = [
     {
-      icon: <Home className="service-icon" />,
-      title: t('service_1_title'),
-      description: t('service_1_desc'),
-      benefit: t('service_1_benefit'),
+      icon: <Home className="text-arnika-teal text-4xl mb-3" />,
+      title: t('service_1_title', 'Home Cleaning'),
+      description: t('service_1_desc', 'Detailed and comprehensive home cleaning services.'),
+      benefit: t('service_1_benefit', 'Every corner spotless!'),
       details: [
-        t('service_1_detail_1'),
-        t('service_1_detail_2'),
-        t('service_1_detail_3'),
-        t('service_1_detail_4')
+        t('service_1_detail_1', 'Detailed room-by-room cleaning'),
+        t('service_1_detail_2', 'Kitchen and bathroom sanitization'),
+        t('service_1_detail_3', 'Floor cleaning and polishing'),
+        t('service_1_detail_4', 'Dusting and surface cleaning')
       ]
     },
     {
@@ -98,13 +97,13 @@ const Services: React.FC = () => {
     <section id="services" className="py-20 px-4 md:px-10 lg:px-20 bg-zinc-900">
       <div className="container mx-auto">
         <IntersectionObserver>
-          <h2 className="section-title">{t('services_title')}</h2>
+          <h2 className="section-title">{t('services_title', 'Our Services')}</h2>
         </IntersectionObserver>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {services.map((service, index) => (
             <IntersectionObserver key={index} threshold={0.2}>
-              <div className="bg-zinc-800 p-8 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-arnika-teal/20">
+              <div className="bg-zinc-800 p-8 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-arnika-teal/20 h-full flex flex-col">
                 <div className="cursor-pointer" onClick={() => toggleService(index)}>
                   {service.icon}
                   <div className="flex justify-between items-center">
@@ -125,7 +124,7 @@ const Services: React.FC = () => {
                   )}
                 >
                   <hr className="my-4 border-zinc-700" />
-                  <h4 className="font-semibold mb-2">{t('service_details')}:</h4>
+                  <h4 className="font-semibold mb-2">{t('service_details', 'Service Details')}:</h4>
                   <ul className="list-disc pl-5 space-y-2 text-gray-300">
                     {service.details.map((detail, i) => (
                       <li key={i}>{detail}</li>
