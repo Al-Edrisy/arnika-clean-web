@@ -15,7 +15,7 @@ import {
 const Contact: React.FC = () => {
   const { t } = useLanguage();
   const isMobile = useIsMobile();
-  const phoneNumber = "+905551234567";
+  const phoneNumber = "+905321552868";
   const whatsappMessage = encodeURIComponent(t('whatsapp_message'));
 
   const getWhatsAppLink = () => {
@@ -71,8 +71,8 @@ const Contact: React.FC = () => {
                 <div className="flex items-center">
                   <Mail className="text-arnika-teal mr-4" />
                   <div>
-                    <a href="mailto:info@arnika.com" className="hover:text-arnika-teal transition-colors">
-                      info@arnika.com
+                    <a href="mailto:viatamizlik@gmail.com" className="hover:text-arnika-teal transition-colors">
+                      viatamizlik@gmail.com
                     </a>
                   </div>
                 </div>
@@ -82,8 +82,8 @@ const Contact: React.FC = () => {
                 <div className="flex items-center">
                   <Instagram className="text-arnika-teal mr-4" />
                   <div>
-                    <a href="https://instagram.com/arnikatemizlik" target="_blank" rel="noopener noreferrer" className="hover:text-arnika-teal transition-colors">
-                      @arnikatemizlik
+                    <a href="https://instagram.com/viatamizlik" target="_blank" rel="noopener noreferrer" className="hover:text-arnika-teal transition-colors">
+                      @viatamizlik
                     </a>
                   </div>
                 </div>
@@ -120,10 +120,8 @@ const Contact: React.FC = () => {
                     <SelectValue placeholder={t('select_service')} />
                   </SelectTrigger>
                   <SelectContent className="bg-zinc-800 border border-zinc-700">
-                    <SelectItem value="home">{t('service_1_title')}</SelectItem>
                     <SelectItem value="office">{t('service_2_title')}</SelectItem>
                     <SelectItem value="marble">{t('service_3_title')}</SelectItem>
-                    <SelectItem value="carpet">{t('service_4_title')}</SelectItem>
                     <SelectItem value="facade">{t('service_5_title')}</SelectItem>
                     <SelectItem value="disinfection">{t('service_6_title')}</SelectItem>
                   </SelectContent>

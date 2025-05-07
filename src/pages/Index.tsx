@@ -18,7 +18,7 @@ const Index = () => {
     // Add meta description
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
-      metaDesc.setAttribute("content", "Via Temizlik Hizmetleri - İzmir'in Profesyonel Temizlik Ekibi, ev, ofis ve özel temizlik hizmetleri sunmaktadır.");
+      metaDesc.setAttribute("content", "Via Temizlik Hizmetleri - Antalya ve KKTC'nin Profesyonel Temizlik Ekibi, ev, ofis ve özel temizlik hizmetleri sunmaktadır.");
     }
   }, []);
   

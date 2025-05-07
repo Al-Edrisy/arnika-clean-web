@@ -15,8 +15,8 @@ const translations: Record<string, Record<Language, string>> = {
     en: "Via Cleaning"
   },
   "hero_subtitle": {
-    tr: "İzmir'in Profesyonel Temizlik Ekibi",
-    en: "İzmir's Professional Cleaning Team"
+    tr: "Antalya ve KKTC'nin Profesyonel Temizlik Ekibi",
+    en: "Professional Cleaning Team in Antalya and North Cyprus"
   },
   "hero_cta": {
     tr: "Ücretsiz Teklif Al",
@@ -29,46 +29,18 @@ const translations: Record<string, Record<Language, string>> = {
     en: "About Us"
   },
   "about_text": {
-    tr: "2015 yılından beri tecrübemizle, inşaat sonrası temizlik, ofis sterilizasyonu ve özel yüzey bakımında İzmir'in güvenilir partneriyiz.",
-    en: "Since 2015, we specialize in post-construction cleaning, office sterilization, and premium surface care in İzmir."
+    tr: "2015 yılından beri tecrübemizle, inşaat sonrası temizlik, ofis sterilizasyonu ve özel yüzey bakımında Antalya ve KKTC'nin güvenilir partneriyiz.",
+    en: "Since 2015, we specialize in post-construction cleaning, office sterilization, and premium surface care in Antalya and North Cyprus."
   },
   "about_text_2": {
-    tr: "Çevre dostu ürünler ve gelişmiş temizlik teknikleri kullanarak İzmir genelinde evler ve işletmeler için olağanüstü sonuçlar sunuyoruz.",
-    en: "We use environmentally friendly products and advanced cleaning techniques to deliver exceptional results for homes and businesses throughout İzmir."
+    tr: "Çevre dostu ürünler ve gelişmiş temizlik teknikleri kullanarak Antalya ve KKTC genelinde evler ve işletmeler için olağanüstü sonuçlar sunuyoruz.",
+    en: "We use environmentally friendly products and advanced cleaning techniques to deliver exceptional results for homes and businesses throughout Antalya and North Cyprus."
   },
   
   // Services Section
   "services_title": {
     tr: "Hizmetlerimiz",
     en: "Our Services"
-  },
-  "service_1_title": {
-    tr: "Ev Temizliği",
-    en: "Home Cleaning"
-  },
-  "service_1_desc": {
-    tr: "Detaylı ve kapsamlı ev temizlik hizmetleri.",
-    en: "Detailed and comprehensive home cleaning services."
-  },
-  "service_1_benefit": {
-    tr: "Her köşe pırıl pırıl!",
-    en: "Every corner spotless!"
-  },
-  "service_1_detail_1": {
-    tr: "Detaylı oda oda temizlik",
-    en: "Detailed room-by-room cleaning"
-  },
-  "service_1_detail_2": {
-    tr: "Mutfak ve banyo dezenfeksiyonu",
-    en: "Kitchen and bathroom sanitization"
-  },
-  "service_1_detail_3": {
-    tr: "Zemin temizliği ve cilalama",
-    en: "Floor cleaning and polishing"
-  },
-  "service_1_detail_4": {
-    tr: "Toz alma ve yüzey temizliği",
-    en: "Dusting and surface cleaning"
   },
   "service_2_title": {
     tr: "Ofis Temizliği",
@@ -125,34 +97,6 @@ const translations: Record<string, Record<Language, string>> = {
   "service_3_detail_4": {
     tr: "Uzun vadeli bakım planları",
     en: "Long-term maintenance plans"
-  },
-  "service_4_title": {
-    tr: "Halı Temizliği",
-    en: "Carpet Cleaning"
-  },
-  "service_4_desc": {
-    tr: "Halılar ve kilimler için profesyonel derinlemesine temizlik",
-    en: "Professional deep cleaning for carpets and rugs"
-  },
-  "service_4_benefit": {
-    tr: "Lekeleri ve alerjenleri etkili bir şekilde giderin",
-    en: "Remove stains and allergens effectively"
-  },
-  "service_4_detail_1": {
-    tr: "Derin leke çıkarma",
-    en: "Deep stain extraction"
-  },
-  "service_4_detail_2": {
-    tr: "Alerjen giderme tedavisi",
-    en: "Allergen removal treatment"
-  },
-  "service_4_detail_3": {
-    tr: "Hızlı kuruma süreci",
-    en: "Quick drying process"
-  },
-  "service_4_detail_4": {
-    tr: "Koku giderme ve tazeleme",
-    en: "Deodorizing and refreshing"
   },
   "service_5_title": {
     tr: "Cephe Temizliği",
@@ -379,8 +323,8 @@ const translations: Record<string, Record<Language, string>> = {
     en: "© 2025 Via Cleaning. All rights reserved."
   },
   "footer_description": {
-    tr: "İzmir'de ev ve işyerleri için kalite, güvenilirlik ve müşteri memnuniyeti odaklı profesyonel temizlik hizmetleri.",
-    en: "Professional cleaning services for homes and businesses in İzmir with a focus on quality, reliability and customer satisfaction."
+    tr: "Antalya ve KKTC'de ev ve işyerleri için kalite, güvenilirlik ve müşteri memnuniyeti odaklı profesyonel temizlik hizmetleri.",
+    en: "Professional cleaning services for homes and businesses in Antalya and North Cyprus with a focus on quality, reliability and customer satisfaction."
   }
 };
 

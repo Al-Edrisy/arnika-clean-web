@@ -1,7 +1,8 @@
+
 import React, { useState } from 'react';
 import { useLanguage } from '@/hooks/useLanguage';
 import IntersectionObserver from './IntersectionObserver';
-import { Home, Briefcase, Star, ChevronDown, ChevronUp, Eraser, Building, Droplets } from 'lucide-react';
+import { Briefcase, Star, ChevronDown, ChevronUp, Building, Droplets } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useIsMobile } from '@/hooks/use-mobile';
 
@@ -19,18 +20,6 @@ const Services: React.FC = () => {
   };
 
   const services = [
-    {
-      icon: <Home className="text-arnika-teal text-4xl mb-3" />,
-      title: t('service_1_title', 'Home Cleaning'),
-      description: t('service_1_desc', 'Detailed and comprehensive home cleaning services.'),
-      benefit: t('service_1_benefit', 'Every corner spotless!'),
-      details: [
-        t('service_1_detail_1', 'Detailed room-by-room cleaning'),
-        t('service_1_detail_2', 'Kitchen and bathroom sanitization'),
-        t('service_1_detail_3', 'Floor cleaning and polishing'),
-        t('service_1_detail_4', 'Dusting and surface cleaning')
-      ]
-    },
     {
       icon: <Briefcase className="service-icon" />,
       title: t('service_2_title'),
@@ -53,18 +42,6 @@ const Services: React.FC = () => {
         t('service_3_detail_2'),
         t('service_3_detail_3'),
         t('service_3_detail_4')
-      ]
-    },
-    {
-      icon: <Eraser className="service-icon" />,
-      title: t('service_4_title'),
-      description: t('service_4_desc'),
-      benefit: t('service_4_benefit'),
-      details: [
-        t('service_4_detail_1'),
-        t('service_4_detail_2'),
-        t('service_4_detail_3'),
-        t('service_4_detail_4')
       ]
     },
     {
@@ -100,7 +77,7 @@ const Services: React.FC = () => {
           <h2 className="section-title">{t('services_title', 'Our Services')}</h2>
         </IntersectionObserver>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
           {services.map((service, index) => (
             <IntersectionObserver key={index} threshold={0.2}>
               <div className="bg-zinc-800 p-8 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-arnika-teal/20 h-full flex flex-col">
