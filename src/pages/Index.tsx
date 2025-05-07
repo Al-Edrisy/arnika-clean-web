@@ -9,20 +9,26 @@ import Testimonials from '@/components/Testimonials';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import FloatingWhatsApp from '@/components/FloatingWhatsApp';
+import { motion } from 'framer-motion';
 
 const Index = () => {
   useEffect(() => {
-    document.title = "Via Cleaning Services | Professional Cleaning Team";
+    document.title = "Via Temizlik Hizmetleri | Profesyonel Temizlik Ekibi";
     
     // Add meta description
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
-      metaDesc.setAttribute("content", "Via Cleaning Services - İzmir's Professional Cleaning Team offering home, office, and specialized cleaning services.");
+      metaDesc.setAttribute("content", "Via Temizlik Hizmetleri - İzmir'in Profesyonel Temizlik Ekibi, ev, ofis ve özel temizlik hizmetleri sunmaktadır.");
     }
   }, []);
   
   return (
-    <div className="min-h-screen bg-arnika-dark text-arnika-white font-montserrat">
+    <motion.div 
+      className="min-h-screen bg-arnika-dark text-arnika-white font-montserrat"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
       <LangToggle />
       <FloatingWhatsApp />
       <Hero />
@@ -32,7 +38,7 @@ const Index = () => {
       <Testimonials />
       <Contact />
       <Footer />
-    </div>
+    </motion.div>
   );
 };
 

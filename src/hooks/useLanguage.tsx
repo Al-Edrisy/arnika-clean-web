@@ -283,48 +283,56 @@ const translations: Record<string, Record<Language, string>> = {
   
   // Testimonials Section
   "testimonials_title": {
-    tr: "Referanslar",
-    en: "Testimonials"
+    tr: "Referanslarımız",
+    en: "Our References"
+  },
+  "testimonials_subtitle": {
+    tr: "Farklı sektörlerden müşterilerimizin Via Temizlik tecrübesi hakkında söyledikleri",
+    en: "What our clients from various industries say about their Via Cleaning experience"
+  },
+  "verified_client": {
+    tr: "Doğrulanmış Müşteri",
+    en: "Verified Client"
   },
   "testimonial_1": {
-    tr: "Arnika'nın cam temizliği hizmeti muazzam!",
-    en: "Arnika's window cleaning is flawless!"
+    tr: "Via Temizlik ekibi, Manavgat'taki TOKİ konutları projemizde muhteşem bir iş çıkardı. İnşaat sonrası temizliğin ne kadar kritik olduğunu biliyoruz ve sonuçtan son derece memnunuz. Özellikle detaylara gösterilen özen ve profesyonel yaklaşımları takdire şayan.",
+    en: "Via Cleaning team did an amazing job on our TOKİ housing project in Manavgat. We know how critical post-construction cleaning is, and we are extremely satisfied with the results. Their attention to detail and professional approach is commendable."
   },
   "testimonial_1_author": {
-    tr: "Ayşe K., Ankara",
-    en: "Ayşe K., Ankara"
+    tr: "Ahmet Yılmaz",
+    en: "Ahmet Yılmaz"
   },
   "testimonial_2": {
-    tr: "Ofisimizin temizliğinden çok memnunuz. Kesinlikle tavsiye ediyorum.",
-    en: "We're very satisfied with our office cleaning. Highly recommended!"
+    tr: "Antalya Altıntaş'taki projemizin teslim öncesi temizliğinde Via Temizlik'i tercih ettik ve kesinlikle doğru bir karar vermişiz. Tüm yüzeyler, camlar, mermerler profesyonelce temizlendi. Müşterilerimiz teslimat sırasında temizlikten çok etkilendiler. Teşekkürler Via!",
+    en: "We chose Via Cleaning for the pre-delivery cleaning of our project in Antalya Altıntaş, and it was definitely the right decision. All surfaces, windows, and marbles were professionally cleaned. Our customers were very impressed with the cleanliness during delivery. Thank you Via!"
   },
   "testimonial_2_author": {
-    tr: "Mehmet B., İş Sahibi",
-    en: "Mehmet B., Business Owner"
+    tr: "Mehmet Özcan",
+    en: "Mehmet Özcan"
   },
   "testimonial_3": {
-    tr: "Mermer zeminlerimiz ilk günkü gibi parlak!",
-    en: "Our marble floors shine like new!"
+    tr: "Belek Plajı'ndaki tesislerimizin sezon öncesi temizliğinde Via Temizlik'in hijyen standartları ve profesyonel ekibi gerçekten fark yaratıyor. Dört yıldır birlikte çalışıyoruz ve her seferinde aynı kaliteli hizmeti alıyoruz. Turizm sektöründe temizlik olmazsa olmaz!",
+    en: "Via Cleaning's hygiene standards and professional team really make a difference in the pre-season cleaning of our facilities at Belek Beach. We've been working together for four years and receive the same high-quality service every time. In tourism, cleanliness is non-negotiable!"
   },
   "testimonial_3_author": {
-    tr: "John D., Expat",
-    en: "John D., Expat"
+    tr: "Osman Aydın",
+    en: "Osman Aydın"
   },
   "testimonial_4": {
-    tr: "Temizlik ekibi son derece kapsamlı ve profesyoneldi. Ofis alanımızı tamamen dönüştürdüler!",
-    en: "The cleaning team was extremely thorough and professional. They transformed our office space completely!"
+    tr: "Kadriye Plajı tesislerimizde düzenli olarak Via Temizlik hizmetlerinden faydalanıyoruz. Özellikle yoğun sezonda, hassas temizlik gereksinimlerimizi her zaman yüksek standartlarda karşılıyorlar. Çevre dostu ürünleri ve eğitimli personeli ile kesinlikle tavsiye ediyoruz.",
+    en: "We regularly use Via Cleaning services at our Kadriye Beach facilities. Especially during the peak season, they always meet our sensitive cleaning requirements to high standards. With their environmentally friendly products and trained staff, we definitely recommend them."
   },
   "testimonial_4_author": {
-    tr: "Ahmet Y.",
-    en: "Ahmet Y."
+    tr: "Ali Kaya",
+    en: "Ali Kaya"
   },
   "testimonial_5": {
-    tr: "Birçok temizlik hizmeti denedim, ancak Arnika açık ara en iyisi. Her ayrıntıya dikkat ediyorlar.",
-    en: "I've tried many cleaning services, but Arnika is by far the best. They pay attention to every detail."
+    tr: "Serik-Belek Arıtma Tesislerimizin kritik alanlarının temizliğinde Via Temizlik'e güveniyoruz. Özel kimyasallar gerektiren bu hassas iş için gerekli sertifikalara ve uzmanlığa sahip olmaları bizim için çok değerli. İş güvenliği konusundaki hassasiyetleri de ayrıca takdire şayan.",
+    en: "We trust Via Cleaning for cleaning the critical areas of our Serik-Belek Water Treatment Facilities. Their certifications and expertise for this sensitive job requiring special chemicals are invaluable to us. Their sensitivity to occupational safety is also commendable."
   },
   "testimonial_5_author": {
-    tr: "Zeynep K.",
-    en: "Zeynep K."
+    tr: "Prof. Dr. Hakan Şentürk",
+    en: "Prof. Dr. Hakan Şentürk"
   },
   
   // Contact Section
