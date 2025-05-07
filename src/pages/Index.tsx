@@ -12,12 +12,12 @@ import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 
 const Index = () => {
   useEffect(() => {
-    document.title = "Arnika Cleaning Services | Professional Cleaning Team";
+    document.title = "Via Cleaning Services | Professional Cleaning Team";
     
     // Add meta description
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
-      metaDesc.setAttribute("content", "Arnika Cleaning Services - Ankara's Professional Cleaning Team offering home, office, and specialized cleaning services.");
+      metaDesc.setAttribute("content", "Via Cleaning Services - İzmir's Professional Cleaning Team offering home, office, and specialized cleaning services.");
     }
   }, []);
   

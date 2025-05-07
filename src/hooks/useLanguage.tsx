@@ -11,12 +11,12 @@ type LanguageContextType = {
 const translations: Record<string, Record<Language, string>> = {
   // Hero Section
   "hero_title": {
-    tr: "Arnika Temizlik",
-    en: "Arnika Cleaning"
+    tr: "Via Temizlik",
+    en: "Via Cleaning"
   },
   "hero_subtitle": {
-    tr: "Ankara'nın Profesyonel Temizlik Ekibi",
-    en: "Ankara's Professional Cleaning Team"
+    tr: "İzmir'in Profesyonel Temizlik Ekibi",
+    en: "İzmir's Professional Cleaning Team"
   },
   "hero_cta": {
     tr: "Ücretsiz Teklif Al",
@@ -29,12 +29,12 @@ const translations: Record<string, Record<Language, string>> = {
     en: "About Us"
   },
   "about_text": {
-    tr: "10 yılı aşkın tecrübemizle, inşaat sonrası temizlik, ofis sterilizasyonu ve özel yüzey bakımında Türkiye'nin güvenilir partneriyiz.",
-    en: "With 10+ years of experience, we specialize in post-construction cleaning, office sterilization, and premium surface care in Turkey."
+    tr: "2015 yılından beri tecrübemizle, inşaat sonrası temizlik, ofis sterilizasyonu ve özel yüzey bakımında İzmir'in güvenilir partneriyiz.",
+    en: "Since 2015, we specialize in post-construction cleaning, office sterilization, and premium surface care in İzmir."
   },
   "about_text_2": {
-    tr: "Çevre dostu ürünler ve gelişmiş temizlik teknikleri kullanarak Ankara genelinde evler ve işletmeler için olağanüstü sonuçlar sunuyoruz.",
-    en: "We use environmentally friendly products and advanced cleaning techniques to deliver exceptional results for homes and businesses throughout Ankara."
+    tr: "Çevre dostu ürünler ve gelişmiş temizlik teknikleri kullanarak İzmir genelinde evler ve işletmeler için olağanüstü sonuçlar sunuyoruz.",
+    en: "We use environmentally friendly products and advanced cleaning techniques to deliver exceptional results for homes and businesses throughout İzmir."
   },
   
   // Services Section
@@ -229,8 +229,8 @@ const translations: Record<string, Record<Language, string>> = {
     en: "1000+ Projects"
   },
   "experience_count": {
-    tr: "10+ Yıl Tecrübe",
-    en: "10+ Years Experience"
+    tr: "8+ Yıl Tecrübe",
+    en: "8+ Years Experience"
   },
   "eco_friendly": {
     tr: "Ekolojik temizlik ürünleri",
@@ -367,8 +367,12 @@ const translations: Record<string, Record<Language, string>> = {
   
   // Footer
   "footer_copyright": {
-    tr: "© 2025 Arnika Temizlik. Tüm hakları saklıdır.",
-    en: "© 2025 Arnika Cleaning. All rights reserved."
+    tr: "© 2025 Via Temizlik. Tüm hakları saklıdır.",
+    en: "© 2025 Via Cleaning. All rights reserved."
+  },
+  "footer_description": {
+    tr: "İzmir'de ev ve işyerleri için kalite, güvenilirlik ve müşteri memnuniyeti odaklı profesyonel temizlik hizmetleri.",
+    en: "Professional cleaning services for homes and businesses in İzmir with a focus on quality, reliability and customer satisfaction."
   }
 };
 

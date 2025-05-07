@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { useLanguage } from '@/hooks/useLanguage';
-import { Instagram, Phone, Mail, MessageCircle } from 'lucide-react';
+import { Instagram, Phone, Mail, MessageCircle, MapPin } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 const Footer: React.FC = () => {
@@ -21,9 +21,15 @@ const Footer: React.FC = () => {
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center mb-8">
           <div className="mb-6 md:mb-0">
-            <h3 className="text-xl font-bold mb-2 text-arnika-teal">Arnika Cleaning</h3>
+            <h3 className="text-xl font-bold mb-2 text-arnika-teal">Via Cleaning</h3>
             <p className="text-sm text-gray-400 max-w-md">
-              {t('footer_description', 'Professional cleaning services for homes and businesses in Ankara with a focus on quality, reliability and customer satisfaction.')}
+              {t('footer_description', 'Professional cleaning services for homes and businesses in İzmir with a focus on quality, reliability and customer satisfaction.')}
+            </p>
+            <p className="text-xs text-gray-500 mt-2">
+              DALGIÇ GIDA TEMİZLİK ÜRÜNLERİ TAAHHÜT SANAYİ VE TİCARET LTD. ŞTİ.
+            </p>
+            <p className="text-xs text-gray-500 mt-1">
+              Vergi No: 631 044 4494 | Sicil No: 165424
             </p>
           </div>
           
@@ -37,9 +43,15 @@ const Footer: React.FC = () => {
             </div>
             <div className="flex items-center">
               <Mail size={16} className="text-arnika-teal mr-2" />
-              <a href="mailto:info@arnika.com" className="text-gray-400 hover:text-white transition-colors">
-                info@arnika.com
+              <a href="mailto:info@via-cleaning.com" className="text-gray-400 hover:text-white transition-colors">
+                info@via-cleaning.com
               </a>
+            </div>
+            <div className="flex items-center">
+              <MapPin size={16} className="text-arnika-teal mr-2" />
+              <span className="text-gray-400 text-sm">
+                Mansuroğlu Mah., 286/3 Sok., No: 3/A, Bayraklı / İZMİR
+              </span>
             </div>
           </div>
         </div>
@@ -53,7 +65,7 @@ const Footer: React.FC = () => {
           
           <div className="flex space-x-4">
             <a 
-              href="https://instagram.com/arnikatemizlik" 
+              href="https://instagram.com/viacleaning" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-arnika-teal hover:text-arnika-blue transition-colors"
@@ -78,7 +90,7 @@ const Footer: React.FC = () => {
               <Phone size={20} />
             </a>
             <a 
-              href="mailto:info@arnika.com" 
+              href="mailto:info@via-cleaning.com" 
               className="text-arnika-teal hover:text-arnika-blue transition-colors"
               aria-label="Email"
             >

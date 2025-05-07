@@ -20,7 +20,13 @@ const About: React.FC = () => {
                 {t('about_text')}
               </p>
               <p className="text-lg font-opensans leading-relaxed mt-4">
-                {t('about_text_2', 'We use environmentally friendly products and advanced cleaning techniques to deliver exceptional results for homes and businesses throughout Ankara.')}
+                {t('about_text_2')}
+              </p>
+              <p className="text-sm text-gray-400 mt-4">
+                DALGIÇ GIDA TEMİZLİK ÜRÜNLERİ TAAHHÜT SANAYİ VE TİCARET LİMİTED ŞİRKETİ (Via Cleaning)
+              </p>
+              <p className="text-sm text-gray-400">
+                Est. 2015 | İzmir Ticaret Sicil: 165424
               </p>
             </div>
           </IntersectionObserver>
@@ -29,7 +35,7 @@ const About: React.FC = () => {
             <div className="rounded-lg overflow-hidden h-80 md:h-96 w-full shadow-lg shadow-arnika-teal/20">
               <img 
                 src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" 
-                alt="Cleaning Team" 
+                alt="Via Cleaning Team" 
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
             </div>

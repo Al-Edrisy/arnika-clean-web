@@ -8,7 +8,7 @@ const FloatingWhatsApp: React.FC = () => {
   const { t } = useLanguage();
   const isMobile = useIsMobile();
   const phoneNumber = "+905551234567";
-  const whatsappMessage = encodeURIComponent(t('whatsapp_message'));
+  const whatsappMessage = encodeURIComponent(t('whatsapp_message', "Hello! I'd like to inquire about Via's cleaning services."));
   
   const getWhatsAppLink = () => {
     return isMobile 

@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
   return (
     <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-cover bg-center z-0" style={{ 
-        backgroundImage: "url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80')",
+        backgroundImage: "url('https://images.unsplash.com/photo-1496307653780-42ee777d4833?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80')",
         filter: "brightness(0.3)"
        }}></div>
       
